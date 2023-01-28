@@ -1,0 +1,15 @@
+<h1>伝票新規入力</h1>
+
+<% if @petty.errors.any? %>
+  <p class="text-danger"><%= @petty.errors.count %>件のエラーが発生しました</p>
+  <ul>
+  <% @petty.errors.full_messages.each do |message| %>
+    <li>
+      <p class="text-danger"><%= message %></p>
+    </li>
+  <% end %>
+  </ul>
+<% end %>
+
+<%= render 'pettys/list' %>
+

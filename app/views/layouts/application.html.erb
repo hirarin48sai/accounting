@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accounting</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if flash[:notice] %>
+    <div class="flash">
+       <h2 class="text-success"><%= flash[:notice] %></h2>
+    </div>
+    <% end %>
+    <%= render 'layouts/header' %>
+    
+    <%= yield %>
+  </body>
+</html>
